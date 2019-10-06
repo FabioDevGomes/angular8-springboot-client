@@ -1,1 +1,18 @@
-<p>pessoa-detalhes works!</p>
+<h2>Pessoa Details</h2>
+
+<hr/>
+<div *ngIf="pessoa">
+  <div>
+    <label><b>First Name: </b></label> {{pessoa.nome}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{pessoa.email}}
+  </div>
+  <div>
+    <label><b>CPF: </b></label> {{pessoa.cpf}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Pessoa List</button><br>

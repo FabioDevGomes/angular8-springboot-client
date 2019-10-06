@@ -14,9 +14,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let pessoa of pessoas | async">
-          <td>{{pessoa.firstName}}</td>
-          <td>{{pessoa.lastName}}</td>
-          <td>{{pessoa.emailId}}</td>
+          <td>{{pessoa.nome}}</td>
+          <td>{{pessoa.email}}</td>
+          <td>{{pessoa.cpf}}</td>
           <td><button (click)="deletePessoa(pessoa.id)" class="btn btn-danger">Delete</button>
               <button (click)="pessoaUpdate(pessoa.id)" class="btn btn-info" style="margin-left: 10px">Alterar</button>
               <button (click)="pessoaDetails(pessoa.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>

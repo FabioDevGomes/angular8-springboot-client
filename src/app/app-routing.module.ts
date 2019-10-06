@@ -1,17 +1,17 @@
-import { PessoaDetailsComponent } from './pessoa-detalhes/pessoa-detalhes.component';
-import { CreatePessoaComponent } from './pessoa-criar/pessoa-criar.component';
+import { PessoaDetalhesComponent } from './pessoa-detalhes/pessoa-detalhes.component';
+import { PessoaCriarComponent } from './pessoa-criar/pessoa-criar.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PessoaListComponent } from './pessoa-lista/pessoa-lista.component';
-import { UpdatePessoaComponent } from './pessoa-update/pessoa-update.component';
+import { PessoaListaComponent } from './pessoa-lista/pessoa-lista.component';
+import { PessoaUpdateComponent } from './pessoa-update/pessoa-update.component';
 
 
 const routes: Routes = [
    { path: '', redirectTo: 'pessoa', pathMatch: 'full' },
-   { path: 'pessoas', component: PessoaListComponent },
-   { path: 'add', component: CreatePessoaComponent },
-   { path: 'update/:id', component: UpdatePessoaComponent },
-   { path: 'details/:id', component: PessoaDetailsComponent },
+   { path: 'pessoas', component: PessoaListaComponent },
+   { path: 'add', component: PessoaCriarComponent },
+   { path: 'update/:id', component: PessoaUpdateComponent },
+   { path: 'details/:id', component: PessoaDetalhesComponent },
 ];
 
 @NgModule({

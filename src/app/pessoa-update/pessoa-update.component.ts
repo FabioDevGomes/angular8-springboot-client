@@ -30,14 +30,14 @@ export class PessoaUpdateComponent implements OnInit {
   }
 
   updatePessoa() {
-    this.pessoaService.updatePessoa(this.id, this.employee)
+    this.pessoaService.updatePessoa(this.id, this.pessoa)
       .subscribe(data => console.log(data), error => console.log(error));
     this.pessoa = new Pessoa();
     this.gotoList();
   }
 
   onSubmit() {
-    this.updateEmployee();
+    this.updatePessoa();
   }
 
   gotoList() {

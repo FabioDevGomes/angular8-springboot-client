@@ -1,4 +1,4 @@
-import { PessoaDetailsComponent } from '../pessoa-details/pessoa-detalhes.component';
+import { PessoaDetalhesComponent } from '../pessoa-detalhes/pessoa-detalhes.component';
 import { Observable } from "rxjs";
 import { PessoaService } from "../pessoa.service";
 import { Pessoa } from "../pessoa";
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./pessoa-lista.component.css']
 })
 export class PessoaListaComponent implements OnInit {
-  pessoas: Observable<Employee[]>;
+  pessoas: Observable<Pessoa[]>;
 
   constructor(private pessoaService: PessoaService, private router: Router) { }
 

@@ -1,4 +1,4 @@
-mport { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -18,10 +18,6 @@ export class PessoaService {
 
   createPessoa(pessoa: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, pessoa);
-  }
-
-  updatePessoa(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
   deletePessoa(id: number): Observable<any> {
