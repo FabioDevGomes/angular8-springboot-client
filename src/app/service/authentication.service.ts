@@ -19,18 +19,17 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-      console.log("============2"+ username +" "+ password);
-
         return this.http.post<any>('http://localhost:8080/api/v1/validateLogin',  {
       headers: new HttpHeaders(
         {
           'Access-Control-Allow-Origin': 'http://localhost:4200',
           'Access-Control-Allow-Methods': 'POST',
-          'Authorization': username + password,
+          'Authorization': 'Basic '+btoa(username +":"+password),
           'Accept': '*/*',
         })})
             .pipe(map(user => {
-                // store user details and basic auth credentials in local storage to keep user logged in between page refreshes
+              console.log("============000");
+
                 user.authdata = window.btoa(username + ':' + password);
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 this.currentUserSubject.next(user);
