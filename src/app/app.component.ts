@@ -11,16 +11,24 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Client Angular 8';
-
+  title = 'Client Angular';
   currentUser: Usuario;
+  teste: string;
 
   constructor(private router: Router, private authenticationService: AuthenticationService) {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+      console.log('=========constructorApp'+ this.currentUser)
+      this.teste = 'dd';
   }
 
   logout() {
       this.authenticationService.logout();
+      this.teste = null;
       this.router.navigate(['/login']);
   }
+
+  teste1(){
+    console.log('=======///=====')
+  }
+
 }

@@ -13,8 +13,13 @@ import { Router } from '@angular/router';
 })
 export class PessoaListaComponent implements OnInit {
   pessoas: Observable<Pessoa[]>;
+  teste: string;
 
-  constructor(private pessoaService: PessoaService, private router: Router) { }
+  constructor(private pessoaService: PessoaService, private router: Router) {
+    console.log('=========constructorPessoaListaComponent ')
+    this.teste = 'dd';
+
+ }
 
   ngOnInit() {
      this.reloadData();

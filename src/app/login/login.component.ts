@@ -13,12 +13,10 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     error = '';
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
-        private authenticationService: AuthenticationService
-    ) {
+    constructor(private formBuilder: FormBuilder, private route: ActivatedRoute,
+        private router: Router, private authenticationService: AuthenticationService) {
+          console.log('=========constructorLoginComponent ')
+
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) {
             this.router.navigate(['/']);
@@ -53,15 +51,14 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
+                  console.log("========navegando");
                     this.router.navigate([this.returnUrl]);
-                    console.log("============3");
-
                 },
                 error => {
                     this.error = error;
                     this.loading = false;
-                    console.log("============4");
-
+                    console.log("=========Erro no login");
                 });
     }
+
 }

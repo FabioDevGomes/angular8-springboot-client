@@ -2,6 +2,8 @@ import { PessoaService } from '../pessoa.service';
 import { Pessoa } from '../pessoa';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../service/authentication.service';
+
 
 @Component({
   selector: 'app-create-pessoa',
@@ -13,10 +15,12 @@ export class PessoaCriarComponent implements OnInit {
   pessoa: Pessoa = new Pessoa();
   submitted = false;
 
+
+
   constructor(private pessoaService: PessoaService,
     private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
 
   newPessoa(): void {

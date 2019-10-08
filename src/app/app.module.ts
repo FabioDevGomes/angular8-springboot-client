@@ -34,7 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AppComponent
   ],
   bootstrap: [AppComponent]
 })

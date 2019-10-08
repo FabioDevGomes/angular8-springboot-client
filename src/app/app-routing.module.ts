@@ -8,15 +8,14 @@ import { AuthGuard } from './helpers/auth.guard';
 import { LoginComponent } from './login/login.component';
 
 
-
-
 const routes: Routes = [
    { path: '', redirectTo: 'pessoas', pathMatch: 'full' },
    { path: 'pessoas', component: PessoaListaComponent, canActivate: [AuthGuard]},
-   { path: 'add', component: PessoaCriarComponent },
-   { path: 'update/:id', component: PessoaUpdateComponent },
-   { path: 'details/:id', component: PessoaDetalhesComponent },
+   { path: 'add', component: PessoaCriarComponent, canActivate: [AuthGuard] },
+   { path: 'update/:id', component: PessoaUpdateComponent, canActivate: [AuthGuard] },
+   { path: 'details/:id', component: PessoaDetalhesComponent, canActivate: [AuthGuard] },
    { path: 'login', component: LoginComponent },
+   { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
