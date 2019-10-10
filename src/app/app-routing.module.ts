@@ -6,6 +6,8 @@ import { PessoaListaComponent } from './pessoa-lista/pessoa-lista.component';
 import { PessoaUpdateComponent } from './pessoa-update/pessoa-update.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { LoginComponent } from './login/login.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+
 
 
 const routes: Routes = [
@@ -16,6 +18,7 @@ const routes: Routes = [
    { path: 'details/:id', component: PessoaDetalhesComponent, canActivate: [AuthGuard] },
    { path: 'login', component: LoginComponent },
    { path: '**', redirectTo: '' }
+
 ];
 
 @NgModule({

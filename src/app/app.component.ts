@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from './model/usuario';
 import { AuthenticationService } from './service/authentication.service';
-import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -14,21 +13,18 @@ export class AppComponent {
   title = 'Client Angular';
   currentUser: Usuario;
   teste: string;
+  public mostrarMenu = false;
 
-  constructor(private router: Router, private authenticationService: AuthenticationService) {
+
+  constructor(private authenticationService: AuthenticationService) {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-      console.log('=========constructorApp'+ this.currentUser)
-      this.teste = 'dd';
+       this.teste = 'logadoo';
   }
 
-  logout() {
-      this.authenticationService.logout();
-      this.teste = null;
-      this.router.navigate(['/login']);
-  }
-
-  teste1(){
-    console.log('=======///=====')
-  }
+//https://pt.stackoverflow.com/questions/396751/mostrar-navbar-depois-de-autenticar-usu%C3%A1rio-em-angular
+//  receberMostraMenu(mostraMenuLogin) {
+  // console.log('/////////////mostraMenuLogin', mostraMenuLogin);
+  // this.teste = 'logadoo';
+// }
 
 }

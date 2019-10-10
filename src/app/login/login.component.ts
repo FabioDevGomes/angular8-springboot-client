@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
@@ -13,12 +13,16 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     error = '';
 
+    @Output() mostrarMenuEmitter = new EventEmitter();
+
+
     constructor(private formBuilder: FormBuilder, private route: ActivatedRoute,
         private router: Router, private authenticationService: AuthenticationService) {
-          console.log('=========constructorLoginComponent ')
+          console.log('=========const.LoginComponent ')
 
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) {
+            debugger;
             this.router.navigate(['/']);
         }
     }
@@ -28,7 +32,6 @@ export class LoginComponent implements OnInit {
             username: ['', Validators.required],
             password: ['', Validators.required]
         });
-
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
@@ -51,13 +54,13 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                  console.log("========navegando");
-                    this.router.navigate([this.returnUrl]);
+                  const teste = 'logado';
+                  this.mostrarMenuEmitter.emit(teste);
+                  this.router.navigate([this.returnUrl]);
                 },
                 error => {
                     this.error = error;
                     this.loading = false;
-                    console.log("=========Erro no login");
                 });
     }
 

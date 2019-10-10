@@ -1,19 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark" *ngIf="currentUser">
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-        <a routerLink="pessoas" class="nav-link" routerLinkActive="active">Pessoa List</a>
-    </li>
-    <li class="nav-item">
-        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Pessoa</a>
-    </li>
-    <li class="nav-item">
-        <button (click)="logout()" class="btn btn-primary">
-            Logout
-        </button>
-    </li>
-  </ul>
-</nav>
+
+<!--app-login-component (mostrarMenuEmitter)="receberMostraMenu($event)"></app-login-component-->
+<app-header></app-header>
 <div>
   <br>
   <h2 style="text-align: center;">{{title}}</h2>

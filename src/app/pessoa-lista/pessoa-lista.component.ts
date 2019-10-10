@@ -1,9 +1,10 @@
-import { PessoaDetalhesComponent } from '../pessoa-detalhes/pessoa-detalhes.component';
 import { Observable } from "rxjs";
 import { PessoaService } from "../pessoa.service";
 import { Pessoa } from "../pessoa";
 import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../service/authentication.service';
+import { Usuario } from '../model/usuario';
 
 
 @Component({
@@ -13,13 +14,13 @@ import { Router } from '@angular/router';
 })
 export class PessoaListaComponent implements OnInit {
   pessoas: Observable<Pessoa[]>;
-  teste: string;
+  teste$: Observable<Usuario>;
 
-  constructor(private pessoaService: PessoaService, private router: Router) {
-    console.log('=========constructorPessoaListaComponent ')
-    this.teste = 'dd';
+  constructor(private pessoaService: PessoaService, private router: Router,
+    private authenticationService: AuthenticationService) {
+    this.teste$ = this.authenticationService.currentUser;
 
- }
+  }
 
   ngOnInit() {
      this.reloadData();

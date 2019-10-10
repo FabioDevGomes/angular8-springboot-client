@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -23,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PessoaCriarComponent,
     PessoaDetalhesComponent,
     PessoaUpdateComponent,
-    LoginComponent
+    LoginComponent,
+    LoginLayoutComponent,
+    HeaderComponent
   ],
   imports: [
       BrowserModule,
