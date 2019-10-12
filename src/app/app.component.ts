@@ -21,10 +21,4 @@ export class AppComponent {
        this.teste = 'logadoo';
   }
 
-//https://pt.stackoverflow.com/questions/396751/mostrar-navbar-depois-de-autenticar-usu%C3%A1rio-em-angular
-//  receberMostraMenu(mostraMenuLogin) {
-  // console.log('/////////////mostraMenuLogin', mostraMenuLogin);
-  // this.teste = 'logadoo';
-// }
-
 }

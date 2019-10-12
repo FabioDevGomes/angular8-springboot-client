@@ -18,8 +18,6 @@ export class LoginComponent implements OnInit {
 
     constructor(private formBuilder: FormBuilder, private route: ActivatedRoute,
         private router: Router, private authenticationService: AuthenticationService) {
-          console.log('=========const.LoginComponent ')
-
         if (this.authenticationService.currentUserValue) {
             debugger;
             this.router.navigate(['/']);

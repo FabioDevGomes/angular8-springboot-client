@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { AuthenticationService } from '../service/authentication.service';
-import { Router } from '@angular/router';
-import { Usuario } from '../model/usuario';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -13,20 +10,19 @@ import { Injectable } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  teste$: Observable<Usuario>;
-  teste: string;
+  controleHeader: string;
 
-  constructor(private router: Router, private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService) {
     debugger;
   }
 
   ngOnInit() {
     debugger;
-      this.teste = 'logado';
+      this.controleHeader = 'logado';
   }
 
   logout() {
-      this.teste = null;
+      this.controleHeader = null;
       this.authenticationService.logout();
   }
 
