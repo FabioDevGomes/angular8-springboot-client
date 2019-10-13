@@ -16,6 +16,14 @@ A API desenvolvida em REST, seguindo o modelo de maturidade de Richardson ou uti
 
 
 
+ {
+                   
+                    "nome": "Jack Richer 2",
+                    "dataNascimento" : "2017-12-27",
+                    "dataCadastro" : "2017-12-27"
+
+}
+
 
 # Angular8SpringbootClient
 
