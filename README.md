@@ -3,6 +3,13 @@ Banco de dados, no postgres, com nome "cadastro-pessoas" (sem aspas) jdbc:postgr
 execução do client com o ng serve</br>
 No chrome: uso do pluginAllow CORS: Access-Control-Allow-Origin
 
+
+Passos realizados:
+1) Back-end
+2) Front-end
+3) Segurança
+5) Código fonte
+
 # Angular8SpringbootClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
