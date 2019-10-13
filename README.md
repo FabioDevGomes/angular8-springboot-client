@@ -5,10 +5,17 @@ No chrome: uso do pluginAllow CORS: Access-Control-Allow-Origin
 
 
 Passos realizados:
-1) Back-end
-2) Front-end
-3) Segurança
-5) Código fonte
+1) Back-end > Spring
+2) Front-end > Angular
+3) Segurança > Senha: java1, password: pas1 
+5) Código fonte > endpoint com url dos projetos localhost:8080/source/v1/url
+
+Extras
+A API desenvolvida em REST, seguindo o modelo de maturidade de Richardson ou utilizando GraphQL.
+
+
+
+
 
 # Angular8SpringbootClient
 
