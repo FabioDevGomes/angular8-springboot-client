@@ -1,5 +1,5 @@
 ## Instalação
-Banco com nome "cadastro-pessoas" (sem aspas)</br>
+Banco de dados, no postgres, com nome "cadastro-pessoas" (sem aspas) jdbc:postgresql://localhost:5432/cadastro-pessoas</br>
 execução do client com o ng serve</br>
 No chrome: uso do pluginAllow CORS: Access-Control-Allow-Origin
 
