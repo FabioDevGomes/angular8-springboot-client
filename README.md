@@ -1,6 +1,7 @@
 ## Instalação
-Banco com nome "cadastro-pessoas" (sem aspas)
-execução do client com o ng serve
+Banco com nome "cadastro-pessoas" (sem aspas)</br>
+execução do client com o ng serve</br>
+No chrome: uso do pluginAllow CORS: Access-Control-Allow-Origin
 
 # Angular8SpringbootClient
 
