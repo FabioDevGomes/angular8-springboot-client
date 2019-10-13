@@ -1,6 +1,8 @@
 ## Instalação
-Banco de dados, no postgres, com nome "cadastro-pessoas" (sem aspas) jdbc:postgresql://localhost:5432/cadastro-pessoas</br>
-execução do client com o ng serve</br>
+Banco de dados, no postgres, com nome "cadastro-pessoas" (sem aspas) jdbc:postgresql://localhost:5432/cadastro-pessoas
+
+execução do client com o ng serve
+
 No chrome: uso do pluginAllow CORS: Access-Control-Allow-Origin
 
 
@@ -11,6 +13,7 @@ Passos realizados:
 5) Código fonte > endpoint com url dos projetos localhost:8080/source/v1/url
 
 Extras
+
 A API desenvolvida em REST, seguindo o modelo de maturidade de Richardson ou utilizando GraphQL.
 
 
